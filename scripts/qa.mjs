@@ -30,7 +30,8 @@ const mobile = await newPage({
 })
 
 await mobile.goto(baseUrl, { waitUntil: 'domcontentloaded' })
-await mobile.waitForTimeout(500)
+await mobile.locator('.mapboxgl-canvas').waitFor({ state: 'visible' })
+await mobile.waitForTimeout(1800)
 await mobile.screenshot({
   path: 'screenshots/koffee-playwright-mobile-final-qa.png',
   fullPage: false,
@@ -53,7 +54,8 @@ await mobile.close()
 
 const desktop = await newPage({ viewport: { width: 1280, height: 900 } })
 await desktop.goto(baseUrl, { waitUntil: 'domcontentloaded' })
-await desktop.waitForTimeout(900)
+await desktop.locator('.mapboxgl-canvas').waitFor({ state: 'visible' })
+await desktop.waitForTimeout(1800)
 await desktop.screenshot({
   path: 'screenshots/koffee-playwright-desktop-final-qa.png',
   fullPage: false,
