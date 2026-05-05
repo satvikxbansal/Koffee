@@ -5,13 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
         manualChunks(id) {
           if (id.includes('node_modules/framer-motion')) return 'motion'
-          if (id.includes('node_modules/leaflet') || id.includes('node_modules/react-leaflet')) {
-            return 'map'
-          }
+          if (id.includes('node_modules/mapbox-gl')) return 'map'
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'react'
           }

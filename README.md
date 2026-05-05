@@ -11,6 +11,8 @@ npm install
 npm run dev
 ```
 
+Mapbox is loaded from `VITE_MAPBOX_TOKEN` in `.env.local`.
+
 ## QA
 
 Start the dev server, then run:
