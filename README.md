@@ -1,8 +1,7 @@
-# Koffee
+# Brew
 
-Strava for Coffee: a mobile-first social discovery prototype for rating cafes,
-logging specific coffees, seeing friend activity, and exploring a community map
-for Mumbai and Bangalore.
+Just brew it. Brew is a mobile-first community map for finding cafes, logging
+specific coffees, and seeing what friends are sipping.
 
 ## Run
 
@@ -21,6 +20,6 @@ Start the dev server, then run:
 npm run qa
 ```
 
-The QA script exercises the mobile discovery flow, matcha filtering, community
-pinning, city switching, feed navigation, and coffee-book rating save. It also
-captures mobile and desktop screenshots in `screenshots/`.
+The QA script exercises the mobile map flow, matcha filtering, city search,
+feed navigation, and coffee logging. It also captures mobile and desktop
+screenshots in `screenshots/`.
